@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* Color Variables */
+:root {
+  /* Primary Colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral Colors */
+  --v-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  background: var(--pale-blue) url("../images/pattern-background-desktop.svg")
+    no-repeat;
+  background-size: 100% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 380px;
+  min-height: 600px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-hero {
+  border-radius: 15px 15px 0 0;
+  background: url("../images/illustration-hero.svg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.card-body {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.card-title {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.card-desc {
+  color: var(--desaturated-blue);
+  line-height: 1.5rem;
+}
+
+.pricing {
+  width: 100%;
+  background-color: var(--v-pale-blue);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 1.2rem;
+}
+
+.description-group {
+  text-align: left;
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
+.pricing-title {
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.pricing-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--desaturated-blue);
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  font-weight: 700;
+  color: var(--bright-blue);
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: "Red Hat Display", sans-serif;
+  transition: 0.1s all ease-in;
+}
+
+.btn-link:hover {
+  text-decoration: none;
+  color: hsl(245, 75%, 75%);
+}
+
+.card-button {
+  padding: 0 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  height: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.btn-primary {
+  background-color: var(--bright-blue);
+  color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.2s background ease-in;
+}
+
+.btn-primary:hover {
+  background-color: hsl(245, 75%, 65%);
+}
+
+.btn-secondary {
+  background: none;
+  color: var(--dark-blue);
+  transition: 0.2s color ease-in;
+}
+
+.btn-secondary:hover {
+  color: hsl(223, 47%, 5%);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0px;
+  margin: 10px 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 376px) {
+  body {
+    background: var(--pale-blue) url("../images/pattern-background-mobile.svg")
+      no-repeat;
+  }
+
+  .card {
+    width: 90vw;
+    min-height: 75vh;
+  }
+
+  .card-hero {
+    height: 135px;
+  }
+
+  .card-body {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .card-desc {
+    font-size: 0.9rem;
+  }
+
+  .pricing {
+    padding: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .description-group {
+    margin-left: 0.75rem;
+  }
+
+  .pricing-title {
+    font-weight: 900;
+    font-size: 0.75rem;
+  }
+
+  .music-icon {
+    width: 2.75rem;
+  }
+
+  .pricing-desc {
+    font-size: 0.75rem;
+  }
+
+  .btn-link {
+    font-size: 0.75rem;
+  }
+
+  .card-button {
+    padding: 0 1.5rem 0.5rem 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.75rem;
+  }
+
+  .attribution {
+    margin: 5px 0;
+  }
+}
+
+@media (min-height: 810px) and (max-height: 1000px) {
+  .card {
+    height: auto;
+  }
+
+  .card-hero {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 1rem 1.5rem;
+  }
+
+  .pricing {
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .pricing-title {
+    font-size: 0.9rem;
+  }
+
+  .pricing-desc {
+    font-size: 0.9rem;
+  }
+
+  .btn-link {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    height: 50px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .music-icon {
+    width: 2.2rem;
+  }
+  .pricing {
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .description-group {
+    margin-left: 0.5rem;
+  }
+
+  .pricing-title {
+    font-size: 0.75rem;
+  }
+
+  .pricing-desc {
+    font-size: 0.75rem;
+  }
+
+  .btn-link {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    height: 40px;
+    font-size: 0.75rem;
+  }
+}
